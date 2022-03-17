@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    /* width: 900px; */
+    /* height: 900px; */
+    overflow: hidden;
+    font-family: 'Prompt', sans-serif;
+    background-color:  #cae0eb;
+    color: white;
+}
+#search {
+    display: flex;
+    justify-content: center;
+}
+#searching {
+    opacity: 0.8;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 400px;
+    height: 30px;
+}
+#searching:hover {
+    opacity: 1;
+}
+#btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color:  #cae0eb;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#current {
+    width: 430px;
+    height: 300px;
+    margin: auto;
+    margin-top: 10px;
+    padding-top: 10px;
+    background-color: #cae0eb;
+    border-radius: 10px;
+    text-align: center;
+    /* border: solid blue; */
+}
+#current:hover, .eachDay:hover, #btn:hover {
+    background-color: #00baff;
+}
+#days {
+    width: 90%;
+    height: 280px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #cae0eb;
+    border-radius: 10px;
+    display: flex;
+}
+.todayDate {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.location {
+    font-size: 35px;
+    text-transform: uppercase;
+}
+.todayTemp {
+    font-size: 80px;
+}
+.todayComment {
+    font-size: 25px;
+}
+.todayImg {
+    width: 150px;
+}
+.all {
+    display: flex;
+    justify-content: space-around;
+}
+.info, .comImg {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.info {
+    border-right: solid white 0.5px;
+}
+
+.eachDay {
+    width: 12.5%;
+    text-align: center;
+}
+.daysDate {
+    font-weight: bold;
+    font-size: 30px;
+}
+.daysCom {
+    font-size: 20px;
+}
+.daysImg {
+    width: 100px;
+}
+.daysAll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.minMax {
+    font-size: 20px;
+}
