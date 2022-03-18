@@ -2,13 +2,24 @@
     box-sizing: border-box;
 }
 body {
-    /* width: 900px; */
-    /* height: 900px; */
     overflow: hidden;
     font-family: 'Prompt', sans-serif;
-    background-color:  #cae0eb;
     color: white;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
 }
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 #search {
     display: flex;
     justify-content: center;
@@ -20,6 +31,7 @@ body {
     border-bottom-left-radius: 10px;
     width: 400px;
     height: 30px;
+    padding-left: 20px;
 }
 #searching:hover {
     opacity: 1;
@@ -27,10 +39,10 @@ body {
 #btn {
     width: 30px;
     height: 30px;
-    border: none;
+    border: solid white 0.4px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color:  #cae0eb;
+    background: transparent;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -40,24 +52,34 @@ body {
     width: 430px;
     height: 300px;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 20px;
     padding-top: 10px;
-    background-color: #cae0eb;
+    background-color: #94cffa;
+    background: transparent;
     border-radius: 10px;
     text-align: center;
-    /* border: solid blue; */
-}
-#current:hover, .eachDay:hover, #btn:hover {
-    background-color: #00baff;
+    visibility: hidden;
 }
 #days {
     width: 90%;
     height: 280px;
     margin: auto;
-    margin-top: 10px;
-    background-color: #cae0eb;
+    margin-top: 20px;
+    background-color: #94cffa;
+    background: transparent;
     border-radius: 10px;
     display: flex;
+    visibility: hidden;
+}
+.eachDay {
+    width: 12.5%;
+    text-align: center;
+    border-radius: 10px;
+}
+#current:hover, .eachDay:hover {
+    border: solid white 0.4px;
+    transform: scale(1.1,1.1);
+    transition: 0.5s ease;
 }
 .todayDate {
     font-size: 16px;
@@ -88,11 +110,6 @@ body {
 }
 .info {
     border-right: solid white 0.5px;
-}
-
-.eachDay {
-    width: 12.5%;
-    text-align: center;
 }
 .daysDate {
     font-weight: bold;

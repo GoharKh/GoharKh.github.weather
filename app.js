@@ -1,6 +1,7 @@
 const days = document.getElementById('days');
 const searching = document.getElementById('searching')
 const btn = document.getElementById('btn')
+const current = document.getElementById('current')
 btn.addEventListener('click', weather)
 searching.addEventListener("keyup", function(event) {
     if(event.keyCode == 13) weather()
@@ -20,6 +21,8 @@ async function weather() {
     }
     finally {
         console.log("done")
+        current.style.visibility = "visible";
+        days.style.visibility = "visible";
     }
 }
 function currentWeather(data) {
